@@ -72,7 +72,7 @@ class TodoViewTestCase(TestCase):
         response = client.post('/', data)
 
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.templates[0].name, 'todo/index.heml')
+        self.assertEqual(response.templates[0].name, 'todo/index.html')
         self.assertEqual(len(response.context['tasks']), 1)
 
 
